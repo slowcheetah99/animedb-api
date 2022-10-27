@@ -1,12 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 import { Characters, Anime, AnimeInfo, Navbar, Profile } from "./components";
+import { useStyles } from "./styles";
 function App() {
+  const { classes } = useStyles();
   return (
-    <div className="App">
+    <div className={classes.root}>
       <CssBaseline />
       <Navbar />
-      <main>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
         <Routes>
           <Route path="/" element={<Anime />} />
           {/* display similar anime on same page as anime */}

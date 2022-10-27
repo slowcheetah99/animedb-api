@@ -12,13 +12,17 @@
     "@alan-ai/alan-sdk-web": "^1.8.37",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "@reduxjs/toolkit": "^1.8.6",
     "axios": "^1.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
     "react-redux": "^8.0.4",
-    "react-router-dom": "^6.4.2"
+    "react-router-dom": "^6.4.2",
+    "tss-react": "^4.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

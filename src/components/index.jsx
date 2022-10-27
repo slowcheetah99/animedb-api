@@ -3,3 +3,7 @@ export { default as AnimeInfo } from "./AnimeInfo";
 export { default as Characters } from "./Characters";
 export { default as Navbar } from "./Navbar";
 export { default as Profile } from "./Profile";
+export { default as Sidebar } from "./Sidebar";
+export { default as AnimeList } from "./AnimeList";
+export { default as Card } from "./Card";
+export { default as Search } from "./Search";
