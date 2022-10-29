@@ -1,9 +1,16 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+::-webkit-scrollbar-track {
+  background: #cfcfcf;
+}
 
-*{
-    font-family: "Space Grotesk";
+::-webkit-scrollbar-thumb {
+  background: #a5a5a5;
+}
+
+* {
+  text-decoration: none;
+  font-family: "Georama" !important;
 }

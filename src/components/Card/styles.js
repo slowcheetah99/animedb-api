@@ -14,6 +14,7 @@ export const useStyles = makeStyles()((theme) => ({
     marginBottom: "0",
     textAlign: "left",
     marginLeft: "20px",
+    fontWeight: "bold",
   },
   links: {
     alignItems: "center",
@@ -37,5 +38,9 @@ export const useStyles = makeStyles()((theme) => ({
     "&:hover": {
       transform: "scale(1.05)",
     },
+  },
+  linkText: {
+    color: theme.palette.mode === "dark" ? "#eee" : "#1e1e1e",
+    fontWeight: "600",
   },
 }));

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Pagination } from "../";
 import {
   Box,
   CircularProgress,
@@ -21,7 +22,6 @@ export default function Anime() {
     type,
     searchQuery,
   });
-  console.log(data);
 
   if (isFetching)
     return (
@@ -45,9 +45,15 @@ export default function Anime() {
   if (error) {
     return "An error has occurred...";
   }
+
   return (
     <div>
-      <AnimeList anime={data} />
+      <AnimeList anime={data.data} />
+      <Pagination
+        currentPage={page}
+        setPage={setPage}
+        totalPages={data.meta.totalPage}
+      />
     </div>
   );
 }

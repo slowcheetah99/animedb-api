@@ -16,4 +16,7 @@ export const useStyles = makeStyles()((theme) => ({
   genreImage: {
     filter: theme.palette.mode === "dark" ? "dark" : "invert(1)",
   },
+  linkText: {
+    fontWeight: "600",
+  },
 }));

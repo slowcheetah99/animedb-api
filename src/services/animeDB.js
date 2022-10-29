@@ -14,7 +14,6 @@ export const animeDB = createApi({
     },
   }),
   endpoints: (builder) => ({
-    //get all anime
     getAnime: builder.query({
       query: ({ genreIdOrCategoryName, page, type, searchQuery }) => {
         //get anime by search
@@ -24,9 +23,9 @@ export const animeDB = createApi({
             url: "/anime",
             params: {
               page: page,
-              size: "50",
+              size: "48",
               search: `${searchQuery}`,
-              sortBy: "ranking",
+              sortBy: "title",
               sortOrder: "asc",
             },
           };
@@ -37,7 +36,7 @@ export const animeDB = createApi({
             url: "/anime",
             params: {
               page: page,
-              size: "50",
+              size: "48",
               search: `${type}`,
               sortBy: "ranking",
               sortOrder: "asc",
@@ -54,7 +53,7 @@ export const animeDB = createApi({
             url: "/anime",
             params: {
               page: page,
-              size: "50",
+              size: "48",
               genres: genreIdOrCategoryName,
               type: "Movie",
               sortBy: "ranking",
@@ -68,7 +67,7 @@ export const animeDB = createApi({
             url: "/anime",
             params: {
               page: page,
-              size: "50",
+              size: "48",
               sortBy: "ranking",
               sortOrder: "asc",
             },
@@ -84,8 +83,16 @@ export const animeDB = createApi({
         };
       },
     }),
-    //get all anime by genre
+    //get an anime by its id
+    getOneAnime: builder.query({
+      query: (id) => {
+        return {
+          url: `/anime/by-id/${id}`,
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetAnimeQuery, useGetGenresQuery } = animeDB;
+export const { useGetAnimeQuery, useGetGenresQuery, useGetOneAnimeQuery } =
+  animeDB;

@@ -7,3 +7,5 @@ export { default as Sidebar } from "./Sidebar";
 export { default as AnimeList } from "./AnimeList";
 export { default as Card } from "./Card";
 export { default as Search } from "./Search";
+export { default as SimilarAnime } from "./SimilarAnime";
+export { default as Pagination } from "./Pagination";

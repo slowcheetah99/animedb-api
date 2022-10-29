@@ -18,12 +18,13 @@ import { useStyles } from "./styles";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
 import { Sidebar, Search } from "../";
+import { useThemeContext } from "../../hooks/useThemeContext";
 export default function Navbar() {
   const { classes } = useStyles();
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isAuthenticated = true;
+  const { toggleColorMode } = useThemeContext();
   return (
     <>
       <AppBar position="fixed">
@@ -39,34 +40,11 @@ export default function Navbar() {
               <Menu />
             </IconButton>
           )}
-          <IconButton color="inherit" sx={{ ml: 1 }} onClick={() => {}}>
+          <IconButton color="inherit" sx={{ ml: 1 }} onClick={toggleColorMode}>
             {theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
           {!isMobile && <Search />}
-          <div>
-            {!isAuthenticated ? (
-              <Button color="inherit" onClick={() => {}}>
-                Login &nbsp; <AccountCircle />
-              </Button>
-            ) : (
-              <Button
-                color="inherit"
-                component={Link}
-                to={`/profile/:id`}
-                className={classes.linkBtn}
-                onClick={() => {}}
-              >
-                {!isMobile && <>My Movies &nbsp;</>}{" "}
-                <Avatar
-                  style={{ width: 30, height: 30 }}
-                  alt="profile"
-                  src={
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXpHqOfSD5qpOWR1aKK5BUgEmuAzTfyE1rQyB-jHY&s"
-                  }
-                />
-              </Button>
-            )}
-          </div>
+
           {isMobile && <Search />}
         </Toolbar>
       </AppBar>
