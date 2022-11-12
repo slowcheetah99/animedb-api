@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useGetAnimeQuery } from "../../services/animeDB";
-import { AnimeList } from "../index";
+import { AnimeList, FeaturedAnime } from "../index";
 import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
 
 export default function Anime() {
@@ -48,6 +48,7 @@ export default function Anime() {
 
   return (
     <div>
+      <FeaturedAnime anime={data.data[0]} />
       <AnimeList anime={data.data} />
       <Pagination
         currentPage={page}

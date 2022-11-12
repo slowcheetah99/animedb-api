@@ -9,3 +9,4 @@ export { default as Card } from "./Card";
 export { default as Search } from "./Search";
 export { default as SimilarAnime } from "./SimilarAnime";
 export { default as Pagination } from "./Pagination";
+export { default as FeaturedAnime } from "./FeaturedAnime";
