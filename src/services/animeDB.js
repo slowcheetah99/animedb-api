@@ -17,7 +17,6 @@ export const animeDB = createApi({
     getAnime: builder.query({
       query: ({ genreIdOrCategoryName, page, type, searchQuery }) => {
         //get anime by search
-        console.log(searchQuery);
         if (searchQuery) {
           return {
             url: "/anime",

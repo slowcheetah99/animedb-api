@@ -3,11 +3,11 @@ import { CssBaseline } from "@mui/material";
 import { Characters, Anime, AnimeInfo, Navbar, Profile } from "./components";
 import { useStyles } from "./styles";
 import { useRef } from "react";
-import { useAlan } from "./hooks/useAlan";
+// import { useAlan } from "./hooks/useAlan";
 function App() {
   const { classes } = useStyles();
-  const alanRef = useRef();
-  useAlan();
+  // const alanRef = useRef();
+  // useAlan();
 
   return (
     <div className={classes.root}>
@@ -22,7 +22,8 @@ function App() {
           <Route path="/profile/:id" element={<Profile />} />
         </Routes>
       </main>
-      <div ref={alanRef} />
+      {/* commented out due to AlanAI not being available in production without a development plan */}
+      {/* <div ref={alanRef} /> */}
     </div>
   );
 }
